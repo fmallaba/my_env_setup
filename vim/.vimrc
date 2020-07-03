@@ -23,14 +23,6 @@ set autoindent
 set cindent
 set cino+=g+1
 
-
-syntax enable
-set background=light
-colorscheme PaperColor
-"colorscheme monokai
-"colorscheme blink
-"colorscheme solarized
-
 hi Normal guibg=NONE ctermbg=NONE
 
 filetype off
@@ -97,6 +89,14 @@ Plugin 'NLKNguyen/papercolor-theme'
 
 call vundle#end()
 filetype plugin indent on
+
+
+syntax enable
+set background=light
+colorscheme PaperColor
+"colorscheme monokai
+"colorscheme blink
+"colorscheme solarized
 
 
 "let g:clang_library_path="/usr/lib/llvm-version/lib"
