@@ -6,8 +6,6 @@ nnoremap <S-L> <C-W><C-L>
 nnoremap <S-H> <C-W><C-H>
 
 
-execute pathogen#infect()
-
 set guioptions+=a
 set clipboard=unnamedplus
 
