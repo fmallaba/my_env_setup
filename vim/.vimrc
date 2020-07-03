@@ -6,6 +6,7 @@ nnoremap <S-L> <C-W><C-L>
 nnoremap <S-H> <C-W><C-H>
 
 
+execute pathogen#infect()
 
 set guioptions+=a
 set clipboard=unnamedplus
@@ -25,7 +26,12 @@ set cindent
 set cino+=g+1
 
 
-colorscheme monokai
+syntax enable
+set background=light
+colorscheme PaperColor
+"colorscheme monokai
+"colorscheme blink
+"colorscheme solarized
 
 hi Normal guibg=NONE ctermbg=NONE
 
@@ -38,75 +44,72 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'bling/vim-airline'
 
-Plugin 'vim-scripts/Conque-GDB'
-
-Plugin 'terryma/vim-multiple-cursors'
-
-Plugin 'scrooloose/nerdtree'
-
-Plugin 'flazz/vim-colorschemes'
-
-Plugin 'wting/rust.vim'
-
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'vim-scripts/YankRing.vim'
-
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'tomtom/tlib_vim'
-Plugin 'garbas/vim-snipmate'
-Plugin 'honza/vim-snippets'
-
 Plugin 'ekalinin/Dockerfile.vim'
 
-Plugin 'derekwyatt/vim-fswitch'
-
-"Plugin 'Valloric/YouCompleteMe'
-
-"Plugin 'scrooloose/syntastic'
-
-Plugin 'a.vim'
-
-"Plugin 'Rip-Rip/clang_complete'
-
-Plugin 'tpope/vim-fugitive'
-
 Plugin 'majutsushi/tagbar'
-Plugin 'kien/ctrlp.vim'
 
-
-Plugin 'xolox/vim-easytags'
-Plugin 'xolox/vim-misc'
 Plugin 'scrooloose/nerdcommenter'
 
 Plugin 'octol/vim-cpp-enhanced-highlight'
 
 Plugin 'vim-scripts/highlight.vim'
 
-Plugin 'justinmk/vim-syntax-extra'
-Plugin 'tommcdo/vim-exchange'
+Plugin 'NLKNguyen/papercolor-theme'
+
+"Plugin 'vim-scripts/Conque-GDB'
+
+"Plugin 'terryma/vim-multiple-cursors'
+
+"Plugin 'scrooloose/nerdtree'
+
+"Plugin 'flazz/vim-colorschemes'
+
+"Plugin 'wting/rust.vim'
+
+"Plugin 'tpope/vim-surround'
+"Plugin 'tpope/vim-repeat'
+"Plugin 'vim-scripts/YankRing.vim'
+
+"Plugin 'MarcWeber/vim-addon-mw-utils'
+"Plugin 'tomtom/tlib_vim'
+"Plugin 'garbas/vim-snipmate'
+"Plugin 'honza/vim-snippets'
+
+
+"Plugin 'derekwyatt/vim-fswitch'
+
+"Plugin 'Valloric/YouCompleteMe'
+
+"Plugin 'scrooloose/syntastic'
+
+"Plugin 'a.vim'
+
+"Plugin 'Rip-Rip/clang_complete'
+
+"Plugin 'tpope/vim-fugitive'
+
+"Plugin 'kien/ctrlp.vim'
+
+
+"Plugin 'xolox/vim-easytags'
+"Plugin 'xolox/vim-misc'
+
+"Plugin 'justinmk/vim-syntax-extra'
+"Plugin 'tommcdo/vim-exchange'
 
 call vundle#end()
 filetype plugin indent on
 
 
-"colorscheme blink
-"colorscheme solarized
-
-
-let g:clang_library_path="/usr/lib/llvm-version/lib"
-let g:ycm_keep_logfiles = 1
-let g:ycm_log_level = 'debug'
-let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
+"let g:clang_library_path="/usr/lib/llvm-version/lib"
+"let g:ycm_keep_logfiles = 1
+"let g:ycm_log_level = 'debug'
+"let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/YouCompleteMe/third_party/ycmd/cpp/ycm/.ycm_extra_conf.py'
 
 imap <C-\> <Plug>snipMateNextOrTrigger
-smap <C-\> <Plug>snipMateNextOrTrigger
+imap <C-\> <Plug>snipMateNextOrTrigger
 
 
-
-nnoremap <F2> :NERDTreeToggle<CR>
-nnoremap <F3> :AirlineToggle<CR>
-nnoremap <F5> :TagbarToggle<CR>
 
 
 vnoremap <S-Q> :set nu!<CR>
@@ -375,3 +378,11 @@ command! -nargs=+ GREPRust call GrepRust('--include=*.rs ', <f-args>)
 command! -nargs=+ GREPJava call GrepJava('--include=*.java ', <f-args>)
 
 map <F3> :qa<CR>
+map <F4> :wq<CR>
+map <F6> :w<CR>
+
+nnoremap <F2> :NERDTreeToggle<CR>
+nnoremap <F5> :TagbarToggle<CR>
+
+"set rtp+=~/.fzf
+autocmd BufEnter *.cc :setlocal filetype=cpp

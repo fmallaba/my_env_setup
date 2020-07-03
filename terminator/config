@@ -1,0 +1,33 @@
+[global_config]
+  title_transmit_bg_color = "#401e07"
+[keybindings]
+  go_down = <Alt>j
+  go_left = <Alt>h
+  go_right = <Alt>l
+  go_up = <Alt>k
+  layout_launcher = <Primary><Shift><Alt>BackSpace
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      profile = Light
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_color = "#300a24"
+    background_darkness = 0.85
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    foreground_color = "#ffffff"
+    scrollback_infinite = True
+  [[Light]]
+    background_color = "#ffffdd"
+    background_darkness = 0.86
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    foreground_color = "#000000"
+    palette = "#fbf1c7:#cc241d:#98971a:#8f5902:#458588:#b16286:#689d6a:#7c6f64:#928374:#9d0006:#79740e:#483600:#076678:#8f3f71:#427b58:#3c3836"
