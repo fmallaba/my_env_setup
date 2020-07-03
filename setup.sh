@@ -1,23 +1,23 @@
-#!/bin/bash
 
 function setup_bash {
-    echo "[ -f ~/Desktop/.my_env_setup/bash/.my_bash_addons ] && source ~/Desktop/.my_env_setup/bash/.my_bash_addons" >> ~/.bashrc
+    echo "[ -f $PWD/bash/.my_bash_addons ] && source $PWD/bash/.my_bash_addons" >> ~/.bashrc
 }
 
 function setup_vim {
     rm -rf ~/.vim ~/.vimrc
-    ln -s ~/Desktop/.my_env_setup/vim/.vim ~/.vim
-    ln -s ~/Desktop/.my_env_setup/vim/.vimrc ~/.vimrc
+    git clone https://github.com/VundleVim/Vundle.vim.git vim/.vim/bundle/Vundle.vim
+    ln -s $PWD/vim/.vim ~/.vim
+    ln -s $PWD/vim/.vimrc ~/.vimrc
 }
 
 function setup_mc {
     sudo apt install mc
-    ln -s ~/Desktop/.my_env_setup/mc ~/.config/mc
+    ln -s $PWD/mc ~/.config/mc
 }
 
 function setup_terminator {
     sudo apt install terminator
-    ln -s ~/Desktop/.my_env_setup/terminator ~/.config/terminator
+    ln -s $PWD/terminator ~/.config/terminator
 }
 
 function setup_all {
