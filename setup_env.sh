@@ -8,7 +8,7 @@ function setup_bash {
 function setup_vim {
     sudo apt install vim-gnome -y
     rm -rf ~/.vim ~/.vimrc
-    git clone https://github.com/VundleVim/Vundle.vim.git vim/.vim/bundle/Vundle.vim
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     ln -s $PWD/vim/.vim ~/.vim
     ln -s $PWD/vim/.vimrc ~/.vimrc
     vim +PluginInstall +qall > /dev/null
