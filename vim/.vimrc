@@ -37,6 +37,8 @@ Plugin 'ekalinin/Dockerfile.vim'
 
 Plugin 'majutsushi/tagbar'
 
+Plugin 'preservim/nerdtree'
+
 Plugin 'scrooloose/nerdcommenter'
 
 Plugin 'octol/vim-cpp-enhanced-highlight'
