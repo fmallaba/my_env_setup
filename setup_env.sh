@@ -2,7 +2,8 @@
 
 function setup_bash {
     echo "[ -f $PWD/bash/.my_bash_addons ] && source $PWD/bash/.my_bash_addons" >> ~/.bashrc
-    sudo echo "set completion-ignore-case on" >> /etc/inputrc
+    echo 'set completion-ignore-case On' | sudo tee -a /etc/inputrc
+
 }
 
 function setup_vim {
