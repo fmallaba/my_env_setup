@@ -3,15 +3,13 @@
 function setup_bash {
     echo "[ -f $PWD/bash/.my_bash_addons ] && source $PWD/bash/.my_bash_addons" >> ~/.bashrc
     echo 'set completion-ignore-case On' | sudo tee -a /etc/inputrc
-
 }
 
 function setup_vim {
-    sudo apt install vim-gnome -y
-    rm -rf ~/.vim ~/.vimrc
-    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-    ln -s $PWD/vim/.vim ~/.vim
+    sudo apt install vim-gtk3 -y
+    rm -f ~/.vimrc
     ln -s $PWD/vim/.vimrc ~/.vimrc
+    git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
     vim +PluginInstall +qall > /dev/null
 }
 
@@ -41,6 +39,7 @@ function setup_all {
     setup_terminator
     setup_bg
     install_chrome
+    sudo apt install chrome-gnome-shell -y
 }
 
 sudo -
