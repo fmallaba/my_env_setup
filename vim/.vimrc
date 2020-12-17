@@ -123,7 +123,7 @@ vnoremap <S-Y> "+y
 vnoremap <S-O> "+p
 nnoremap <S-O> "+p
 
-vmap // :call VisualSearch()<CR>:hi Search ctermbg=57<CR>:set hlsearch<CR>
+vmap // :call VisualSearch()<CR>:hi Search ctermbg=17 ctermfg=grey<CR>:set hlsearch<CR>
 
 map <A-right> :bn<CR>
 map <A-left> :bp<CR>
