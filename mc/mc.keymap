@@ -132,9 +132,9 @@ Bottom = alt-gt; end; c1
 [dialog]
 Ok = enter
 Cancel = f10; esc; ctrl-g
-Up = left; up
+Up = k; up
 #Left = left; up
-Down = right; down
+Down = j; down
 #Right = right; down
 Help = f1
 Suspend = ctrl-z

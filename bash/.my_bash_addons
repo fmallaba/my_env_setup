@@ -3,4 +3,5 @@ parse_git_branch() {
 }
 export PS1="\u@\h \[\033[32m\]\w\[\033[33m\]\$(parse_git_branch)\[\033[00m\] $ "
 alias del="echo -e '\0033\0143'"
-export MC_SKIN=/home/fmallabaiev/.config/mc/solarized.ini
+export MC_SKIN=~/.config/mc/solarized.ini
+alias gpu="git push --set-upstream origin $(git symbolic-ref --short HEAD)"
